@@ -1,1 +1,1 @@
-this my seconf file
+This is the variables page
