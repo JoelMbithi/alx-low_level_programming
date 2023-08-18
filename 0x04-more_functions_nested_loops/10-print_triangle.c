@@ -1,26 +1,22 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle
- * @size: size of the triangle
+ * print_number - Prints an integer
+ * @n: The integer to be printed
  */
-void print_triangle(int size)
+
+void print_number(int n)
 {
-    if (size <= 0)
-    {
-        _putchar('\n');
-        return;
-    }
+	unsigned int num = n;
 
-    for (int row = 0; row < size; row++)
-    {
-        for (int space = 0; space < size - row - 1; space++)
-            _putchar(' ');
+	if (n < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
 
-        for (int hash = 0; hash < row + 1; hash++)
-            _putchar('#');
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-        _putchar('\n');
-    }
+	_putchar((num % 10) + '0');
 }
-
